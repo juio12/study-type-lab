@@ -1,26 +1,33 @@
 import { studyTypes } from '../data/studyTypes';
+import { Characters } from './Characters';
 
 export default function ResultScreen({ result, onRetake, onHistory, onHome }) {
   const type = studyTypes[result.type];
+  const Character = Characters[result.type];
 
   return (
-    <div className="result-screen">
+    <div className="result-screen paper-screen">
       <div className="screen-body">
 
         <div className="screen-header">
-          <button className="icon-btn" onClick={onHome}>←</button>
+          <button className="icon-btn plain" onClick={onHome} aria-label="시작 화면으로">←</button>
           <h2 className="screen-title">나의 공부 유형 결과</h2>
-          <span className="header-deco">⭐</span>
+          <span className="header-deco">☆</span>
         </div>
 
         <div className="result-card fade-in">
+          <span className="card-star cs1">☆</span>
+          <span className="card-star cs2">✧</span>
+          <span className="card-star cs3">✦</span>
           <div className="result-top">
             <div className="result-char-wrap">
-              <span className="result-char">{type.emoji}</span>
+              <div className="result-char" role="img" aria-label={type.name}>
+                <Character />
+              </div>
             </div>
             <div className="result-info">
               <div className="result-name-badge">
-                {type.name} <span className="name-star">✦</span>
+                {type.name} <span className="name-star">☆</span>
               </div>
               <p className="result-subtitle">{type.subtitle}</p>
               <div className="tags-row">
@@ -58,8 +65,8 @@ export default function ResultScreen({ result, onRetake, onHistory, onHome }) {
         </div>
 
         <div className="result-buttons">
-          <button className="btn-retake" onClick={onRetake}>다시 테스트하기 ↺</button>
-          <button className="btn-history" onClick={onHistory}>히스토리 보기 🗂</button>
+          <button className="btn-retake" onClick={onRetake}>다시 테스트하기 <span>↻</span></button>
+          <button className="btn-history" onClick={onHistory}>히스토리 보기 <span>📒</span></button>
         </div>
 
       </div>
