@@ -4,7 +4,7 @@
 
 ## 데모 영상
 
-
+https://github.com/user-attachments/assets/a604ebe1-6b59-4d02-b156-c3e4f6ff6cbd
 
 ## 기술 스택
 
