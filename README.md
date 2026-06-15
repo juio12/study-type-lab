@@ -2,9 +2,9 @@
 
 12개의 질문으로 알아보는 나만의 공부 유형 테스트
 
-## 데모 영상
+## 실행 영상
 
-https://github.com/user-attachments/assets/a604ebe1-6b59-4d02-b156-c3e4f6ff6cbd
+https://github.com/user-attachments/assets/0ada9043-dae2-4d6d-bf92-bd942c87218f
 
 ## 기술 스택
 
